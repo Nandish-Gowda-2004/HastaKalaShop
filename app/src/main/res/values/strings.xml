@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HastaKalaShop</string>
+    <string name="nav_quick_bill">Bill</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_alerts">Alerts</string>
+    <string name="nav_income">Income</string>
+    <string name="quick_bill_tagline">Hasta Kala — colours, craft, and chaos (the good kind).</string>
+    <string name="quick_bill_hint">Tap a product and celebrate another sale.</string>
+    <string name="dashboard_subtitle">Spot what is selling and what needs love.</string>
+    <string name="stock_subtitle">These friends are running low — time to restock.</string>
+    <string name="income_header_subtitle">Every rupee you earned, lined up nice and neat.</string>
+
+    <!-- Add Product Dialog -->
+    <string name="add_new_product">Add New Product</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Price (₹)</string>
+    <string name="initial_stock">Initial Stock</string>
+    <string name="product_category">Category (e.g., Clothing, Art)</string>
+    <string name="product_variants">Variants (e.g., Red/Blue/Green)</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_product">Save Product</string>
+    <string name="product_added_successfully">Product added successfully</string>
+    <string name="please_fill_required_fields">Please fill required fields</string>
+    <string name="content_description_add_product">Add Product</string>
+</resources>
