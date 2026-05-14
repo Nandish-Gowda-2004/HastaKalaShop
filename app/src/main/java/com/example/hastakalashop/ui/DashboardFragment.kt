@@ -51,9 +51,7 @@ class DashboardFragment : Fragment() {
         // Calculate top products from bills
         val productSales = mutableMapOf<String, Float>()
         bills.forEach { bill ->
-            // itemsSold is currently "Name (xQty)"
-            // For a real app, we'd have a join table, but for now we parse or just use dummy stats
-            val name = bill.itemsSold.substringBefore(" (x")
+            val name = bill.itemsSold.substringBefore(" [").substringBefore(" (x")
             val qty = bill.itemsSold.substringAfter("(x").substringBefore(")").toFloatOrNull() ?: 1f
             productSales[name] = (productSales[name] ?: 0f) + qty
         }
@@ -81,14 +79,15 @@ class DashboardFragment : Fragment() {
             ContextCompat.getColor(requireContext(), R.color.chart_color_other)
         )
         dataSet.valueTextSize = 14f
-        dataSet.valueTextColor = Color.WHITE
+        dataSet.valueTextColor = ContextCompat.getColor(requireContext(), R.color.text_primary)
 
         binding.pieChart.data = PieData(dataSet)
         binding.pieChart.description.isEnabled = false
-        binding.pieChart.setHoleColor(android.graphics.Color.TRANSPARENT)
+        binding.pieChart.setHoleColor(Color.TRANSPARENT)
         binding.pieChart.setTransparentCircleAlpha(0)
         binding.pieChart.centerText = "Sales\nBy Product"
-        binding.pieChart.setCenterTextColor(Color.WHITE)
+        binding.pieChart.setCenterTextColor(ContextCompat.getColor(requireContext(), R.color.text_primary))
+        binding.pieChart.legend.textColor = ContextCompat.getColor(requireContext(), R.color.text_secondary)
         binding.pieChart.animateY(1000)
     }
 
@@ -102,11 +101,15 @@ class DashboardFragment : Fragment() {
             ContextCompat.getColor(requireContext(), R.color.chart_color_3),
             ContextCompat.getColor(requireContext(), R.color.chart_color_other)
         )
-        dataSet.valueTextColor = Color.WHITE
+        dataSet.valueTextColor = ContextCompat.getColor(requireContext(), R.color.text_primary)
         dataSet.valueTextSize = 12f
 
         binding.barChart.data = BarData(dataSet)
         binding.barChart.description.isEnabled = false
+        binding.barChart.xAxis.textColor = ContextCompat.getColor(requireContext(), R.color.text_secondary)
+        binding.barChart.axisLeft.textColor = ContextCompat.getColor(requireContext(), R.color.text_secondary)
+        binding.barChart.axisRight.isEnabled = false
+        binding.barChart.legend.textColor = ContextCompat.getColor(requireContext(), R.color.text_secondary)
         binding.barChart.animateY(1000)
     }
 

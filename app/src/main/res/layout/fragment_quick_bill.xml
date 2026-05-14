@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dark">
+    android:background="@color/background">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="@color/surface_dark"
+                app:cardBackgroundColor="@color/surface"
                 app:cardCornerRadius="26dp"
                 app:cardElevation="2dp"
                 app:strokeWidth="1dp"
@@ -52,28 +52,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Quick bill"
+                            android:text="@string/headline_main"
                             android:textAppearance="?attr/textAppearanceHeadlineMedium"
                             android:textColor="@color/text_primary"
                             android:textStyle="bold" />
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quick_bill_tagline"
-                        android:textAppearance="?attr/textAppearanceTitleLarge"
-                        android:textColor="@color/text_primary"
-                        android:layout_marginTop="12dp"
-                        android:lineSpacingMultiplier="1.05" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quick_bill_hint"
-                        android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="@color/text_secondary"
-                        android:layout_marginTop="10dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -89,7 +72,7 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Selection Panel (Royal Glassmorphism) -->
+    <!-- Selection Panel -->
     <LinearLayout
         android:id="@+id/layout_selection"
         android:layout_width="match_parent"
@@ -103,11 +86,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="12dp"
             app:cardCornerRadius="32dp"
-            app:cardElevation="4dp"
+            app:cardElevation="8dp"
             app:strokeWidth="1dp"
             app:strokeColor="@color/divider_color"
-            app:cardBackgroundColor="@color/surface_dark">
+            app:cardBackgroundColor="@color/surface">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -249,7 +233,7 @@
                     android:layout_marginTop="32dp"
                     android:text="CONFIRM SALE"
                     android:textSize="18sp"
-                    android:textColor="@color/bg_dark"
+                    android:textColor="@color/onPrimary"
                     android:backgroundTint="@color/accent_simple"
                     app:cornerRadius="32dp" />
 

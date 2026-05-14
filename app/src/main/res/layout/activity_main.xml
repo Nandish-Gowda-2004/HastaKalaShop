@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -22,8 +23,8 @@
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/bg_dark"
-        app:backgroundTint="@color/bg_dark"
+        android:background="@color/surface"
+        app:backgroundTint="@color/surface"
         app:itemIconTint="@color/text_secondary"
         app:itemTextColor="@color/text_secondary"
         app:itemRippleColor="@color/accent_simple"

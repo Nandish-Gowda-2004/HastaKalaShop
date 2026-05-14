@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.HastaKalaShop" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.HastaKalaShop" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorOnPrimary">@color/onPrimary</item>
         <item name="colorPrimaryContainer">@color/primaryContainer</item>
@@ -13,11 +13,13 @@
         <item name="colorSurfaceVariant">@color/surfaceVariant</item>
         <item name="colorOnSurfaceVariant">@color/onSurfaceVariant</item>
         <item name="colorOutline">@color/outline</item>
-        <item name="colorSecondaryContainer">@color/primary</item>
-        <item name="colorOnSecondaryContainer">@color/onPrimary</item>
+        <item name="colorSecondaryContainer">@color/primaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/onPrimaryContainer</item>
 
-        <item name="android:navigationBarColor">@color/bg_dark</item>
-        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
         
         <item name="android:windowBackground">@color/background</item>
 
@@ -49,8 +51,8 @@
         <item name="cornerSize">16dp</item>
     </style>
 
-    <style name="CustomAlertDialog" parent="Theme.Material3.DayNight.Dialog.Alert">
+    <style name="CustomAlertDialog" parent="Theme.Material3.Light.Dialog.Alert">
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurface">@color/surface</item>
     </style>
 </resources>
